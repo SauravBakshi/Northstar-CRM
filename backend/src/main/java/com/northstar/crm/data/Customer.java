@@ -1,0 +1,8 @@
+package com.northstar.crm.data;
+import jakarta.persistence.*;
+import java.time.Instant;
+@Entity @Table(name="customers")
+public class Customer {
+ @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; private String name; private String person; private String contactTitle; private String email; private String phone; private String company; private String website; private String address; private String notes; private Double value; private String status="Active"; private String ownerEmail; private Instant createdAt=Instant.now();
+ public Long getId(){return id;} public void setId(Long v){id=v;} public String getName(){return name;} public void setName(String v){name=v;} public String getPerson(){return person;} public void setPerson(String v){person=v;} public String getContactTitle(){return contactTitle;} public void setContactTitle(String v){contactTitle=v;} public String getEmail(){return email;} public void setEmail(String v){email=v;} public String getPhone(){return phone;} public void setPhone(String v){phone=v;} public String getCompany(){return company;} public void setCompany(String v){company=v;} public String getWebsite(){return website;} public void setWebsite(String v){website=v;} public String getAddress(){return address;} public void setAddress(String v){address=v;} public String getNotes(){return notes;} public void setNotes(String v){notes=v;} public Double getValue(){return value;} public void setValue(Double v){value=v;} public String getStatus(){return status;} public void setStatus(String v){status=v;} public String getOwnerEmail(){return ownerEmail;} public void setOwnerEmail(String v){ownerEmail=v;} public Instant getCreatedAt(){return createdAt;}
+}
